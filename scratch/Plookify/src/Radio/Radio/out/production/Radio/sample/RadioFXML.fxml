@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <bottom>
+        <HBox prefHeight="47.0" prefWidth="610.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" text="&lt;|">
+                    <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" text="| |">
+                    <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" text="|&gt;">
+                    <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets left="5.0" right="5.0" />
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextArea prefHeight="112.0" prefWidth="481.0" text="This Area Gives infromation about the current playlist" />
+                <TableView prefHeight="188.0" prefWidth="481.0">
+                    <columns>
+                        <TableColumn prefWidth="75.0" text="Song" />
+                        <TableColumn prefWidth="75.0" text="Artist" />
+                        <TableColumn prefWidth="75.0" text="Length" />
+                        <TableColumn prefWidth="75.0" text="Album" />
+                        <TableColumn prefWidth="75.0" text="Added" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </center>
+    <left>
+        <StackPane prefHeight="355.0" prefWidth="119.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox prefHeight="282.0" prefWidth="119.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Home">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="41.0" />
+                            </VBox.margin>
+                        </Text>
+                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="169.0" text="Home" />
+                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="185.0" text="Explore" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Friends">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="38.0" />
+                            </VBox.margin>
+                        </Text>
+                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="158.0" text="Add new friend" />
+                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="172.0" text="View Friends" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Playlist">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="38.0" />
+                            </VBox.margin>
+                        </Text>
+                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="143.0" text="Playlist1" />
+                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="155.0" text="Playlist 2" />
+                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="173.0" text="Playlist 3" />
+                        <Region prefHeight="200.0" prefWidth="200.0" />
+                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="155.0" text="Radio" />
+                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="155.0" text="Add new playlist" />
+                    </children>
+                    <StackPane.margin>
+                        <Insets />
+                    </StackPane.margin>
+                </VBox>
+            </children>
+        </StackPane>
+    </left>
+    <top>
+        <Pane prefHeight="54.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="14.0" layoutY="12.0" mnemonicParsing="false" text="&lt;" />
+                <Button layoutX="51.0" layoutY="12.0" mnemonicParsing="false" text="&gt;" />
+                <TextArea layoutX="86.0" layoutY="11.0" maxHeight="28.0" maxWidth="219.0" prefHeight="28.0" prefWidth="219.0" promptText="Search.." />
+                <MenuButton layoutX="499.0" layoutY="12.0" mnemonicParsing="false" text="Account">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                </MenuButton>
+                <Text layoutX="321.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plookify" wrappingWidth="140.99560546875">
+                    <font>
+                        <Font name="American Typewriter Bold" size="32.0" />
+                    </font>
+                </Text>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Pane>
+    </top>
+</BorderPane>
