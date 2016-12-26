@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trackplayer.OoController">
+   <children>
+      <TabPane prefHeight="500.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Plookify">
+               <content>
+                  <BorderPane fx:id="pPnae" prefHeight="800.0" prefWidth="1003.0" />
+               </content>
+          </Tab>
+          <Tab fx:id="rPane" text="Radio" />
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

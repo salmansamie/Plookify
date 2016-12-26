@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TabRadio:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TabRadio_jar</output-path>
+    <root id="archive" name="TabRadio.jar">
+      <element id="module-output" name="TabRadio" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/Java libraries/sqlite/sqlite-jdbc-3.8.11.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

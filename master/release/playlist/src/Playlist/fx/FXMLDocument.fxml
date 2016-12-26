@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="389.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="playlist.fx.FXMLDocumentController">
+    <children>
+        <TabPane prefHeight="389.0" prefWidth="602.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Now Playing">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="nowlist" layoutX="14.0" layoutY="49.0" prefHeight="275.0" prefWidth="575.0" />
+                        <Label layoutX="14.0" layoutY="26.0" text="Current tracks in Now Playing queue:" />
+                     </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="My Playlists">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="mylists" layoutX="14.0" layoutY="23.0" onMouseClicked="#myListsOnClick" prefHeight="125.0" prefWidth="461.0" />
+                        <ListView fx:id="mylisttracks" layoutX="15.0" layoutY="180.0" prefHeight="166.0" prefWidth="460.0" />
+                        <Button layoutX="492.0" layoutY="280.0" mnemonicParsing="false" onMouseClicked="#plusNowPlayingOnClick" prefHeight="25.0" prefWidth="101.0" text="+Now Playing" />
+                        <Button layoutX="492.0" layoutY="321.0" mnemonicParsing="false" onMouseClicked="#removeTrackOnClick" prefHeight="25.0" prefWidth="101.0" text="Remove Track" />
+                        <Button layoutX="493.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#removePlaylistOnClick" prefHeight="25.0" prefWidth="100.0" text="Remove Playlist" />
+                        <Pane layoutX="492.0" layoutY="56.0">
+                           <children>
+                              <Button layoutX="1.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#renamePlaylistOnClick" prefHeight="25.0" prefWidth="100.0" text="Rename" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="492.0" layoutY="14.0" text="Name:" />
+                        <TextField fx:id="newname" layoutX="493.0" layoutY="31.0" prefHeight="25.0" prefWidth="100.0" />
+                        <Label layoutX="19.0" layoutY="6.0" prefHeight="17.0" prefWidth="128.0" text="Playlists you've created:" />
+                        <Label layoutX="15.0" layoutY="163.0" text="Tracks in selected playlist:" />
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+            <Tab text="Friends Playlist">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="friendlisttracks" layoutX="15.0" layoutY="183.0" prefHeight="163.0" prefWidth="460.0" />
+                        <ListView fx:id="friendlists" layoutX="14.0" layoutY="28.0" onMouseClicked="#friendListsOnClick" prefHeight="120.0" prefWidth="461.0" />
+                        <Button layoutX="487.0" layoutY="321.0" mnemonicParsing="false" onMouseClicked="#plusNowPlayingFOnClick" prefHeight="25.0" prefWidth="101.0" text="+Now Playing" />
+                        <Label layoutX="15.0" layoutY="6.0" text="Available friend's playlists:" />
+                        <Label layoutX="14.0" layoutY="163.0" text="Tracks in selected friend's playlist" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Search">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Search Artist" />
+                        <TextField fx:id="search" layoutX="94.0" layoutY="10.0" prefHeight="25.0" prefWidth="305.0" />
+                        <Button layoutX="406.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#goSearchOnClick" text="Go" />
+                        <ListView fx:id="searchlist" layoutX="14.0" layoutY="44.0" prefHeight="309.0" prefWidth="424.0" />
+                        <ComboBox fx:id="playlistcombo" editable="true" layoutX="445.0" layoutY="85.0" prefWidth="150.0" />
+                        <Label layoutX="445.0" layoutY="61.0" text="Add to Playlist" />
+                        <Button layoutX="550.0" layoutY="168.0" mnemonicParsing="false" onMouseClicked="#addSearchOnClick" text="Add" />
+                        <CheckBox fx:id="friend" layoutX="447.0" layoutY="125.0" mnemonicParsing="false" text="Friend (if new playlist)" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

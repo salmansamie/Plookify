@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="20.0" prefWidth="50.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trackplayer.PlayerController">
+   <children>
+      <AnchorPane prefHeight="95.0" prefWidth="800.0">
+         <children>
+            <Slider fx:id="timeSlider" layoutX="208.0" layoutY="43.0" prefHeight="11.0" prefWidth="310.0" />
+            <Label fx:id="time" layoutX="518.0" layoutY="43.0" prefHeight="16.0" prefWidth="90.0" text="00:00/00:00" />
+            <Label fx:id="volumeLabel" layoutX="616.0" layoutY="43.0" prefHeight="17.0" prefWidth="21.0" text="Vol" />
+            <Slider fx:id="volumeSlider" layoutX="643.0" layoutY="44.0" prefHeight="16.0" prefWidth="132.0" />
+            <Button fx:id="pauseButton" layoutX="14.0" layoutY="25.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@player.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="playButton" layoutX="76.0" layoutY="25.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@play.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="reloadButton" layoutX="138.0" layoutY="25.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@arrows.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

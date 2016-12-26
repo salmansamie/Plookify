@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--/**
+**Created by Salman on 16-Mar-16.
+-->
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RadioFXMLController">
+    <top>
+        <AnchorPane prefHeight="56.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox layoutX="58.0" layoutY="-36.0" prefHeight="52.0" prefWidth="600.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="66.0" prefWidth="189.0" text=" Plookify" underline="true">
+                            <font>
+                                <Font name="Trebuchet MS Bold" size="35.0" />
+                            </font>
+                            <textFill>
+                                <LinearGradient endX="0.419047619047619" endY="1.0" startX="0.23809523809523808">
+                                    <stops>
+                                        <Stop color="#20ffff" />
+                                        <Stop color="#20ffff" offset="0.5134099616858238" />
+                                        <Stop color="#bb61ff" offset="1.0" />
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                            <effect>
+                                <MotionBlur radius="4.14" />
+                            </effect>
+                        </Label>
+                        <Label fx:id="radioLabel" alignment="BOTTOM_RIGHT" prefHeight="66.0" prefWidth="351.0">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <textFill>
+                                <LinearGradient endX="0.2857142857142857" endY="1.0" startX="0.4095238095238095" startY="0.23333333333333328">
+                                    <stops>
+                                        <Stop color="#268223" />
+                                        <Stop color="#268223" offset="0.07279693486590036" />
+                                        <Stop color="#21ff52" offset="0.7164750957854403" />
+                                        <Stop color="#77ff5c" offset="1.0" />
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                            <cursor>
+                                <Cursor fx:constant="DEFAULT" />
+                            </cursor>
+                            <effect>
+                                <Glow level="0.72" />
+                            </effect>
+                        </Label>
+                        <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="78.0" text="Account" />
+                    </children>
+                </HBox>
+                <Separator layoutY="56.0" prefHeight="15.0" prefWidth="600.0" />
+            </children>
+        </AnchorPane>
+    </top>
+    <left>
+        <AnchorPane prefHeight="297.0" prefWidth="104.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox layoutX="2.0" prefHeight="294.0" prefWidth="104.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="104.0" text="Home" />
+                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="Tracklist" />
+                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="Playlist" />
+                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="Friends" />
+                        <Button mnemonicParsing="false" onAction="#GotoRadio" prefHeight="40.0" prefWidth="104.0" text="Radio" />
+                  <BorderPane prefHeight="110.0" prefWidth="110.0" />
+                  <Button mnemonicParsing="false" onAction="#SaveRadio" prefHeight="37.0" prefWidth="104.0" text="Save" />
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="253.0" prefWidth="496.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox layoutY="18.0" prefHeight="283.0" prefWidth="496.0" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="18.0">
+               <children>
+                  <HBox prefHeight="66.0" prefWidth="496.0">
+                     <children>
+                        <Label fx:id="plName" alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="160.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="playlistNameInsert" alignment="CENTER" prefHeight="40.0" prefWidth="185.0" promptText="Type Playlist name here" visible="false">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="52.0" prefWidth="496.0">
+                     <children>
+                        <Label fx:id="arName" alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="160.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="artistNameInsert" alignment="CENTER" prefHeight="40.0" prefWidth="185.0" promptText="Type Artist name here" visible="false">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <AnchorPane prefHeight="162.0" prefWidth="496.0">
+                     <children>
+                        <Button fx:id="buttonGenerate" layoutX="182.0" layoutY="29.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" text="Generate" visible="false" />
+                     </children>
+                  </AnchorPane>
+               </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </center>
+    <right>
+        <AnchorPane prefHeight="297.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+    </right>
+    <bottom>
+        <AnchorPane prefHeight="36.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox layoutY="9.0" prefHeight="27.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="47.0" text="&lt;" />
+                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="47.0" text="||" />
+                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="47.0" text="&gt;" />
+                    </children>
+                </HBox>
+                <Separator layoutX="4.0" prefHeight="10.0" prefWidth="594.0" />
+            </children>
+        </AnchorPane>
+    </bottom>
+</BorderPane>
